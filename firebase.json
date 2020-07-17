@@ -1,0 +1,18 @@
+{
+  "hosting": {
+    "public": "dist",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      ".git",
+      "package.json",
+      "LICENSE.txt",
+      "README.md",
+      ".vscode"
+    ]
+  },
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  }
+}
