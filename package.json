@@ -5,7 +5,8 @@
   "scripts": {
     "build": "webpack --mode production",
     "build-dev": "webpack --mode=development",
-    "serve": "concurrently --kill-others \"webpack-dev-server --mode=development --hot\" \"firebase serve\"",
+    "serve": "echo \"Serving on localhost:8080\" && concurrently --kill-others \"webpack-dev-server --mode=development --hot\" \"firebase serve\"",
+    "serve-webpack": "webpack-dev-server --mode=development --hot",
     "deploy": "npm run build && firebase deploy"
   },
   "repository": {
@@ -13,13 +14,13 @@
     "url": "https://github.com/kmcnellis/firebase-gtk-web.git"
   },
   "dependencies": {
-    "@babel/core": "^7.10.5",
-    "@firebase/util": "^0.2.45",
-    "firebase": "^7.14.1",
-    "firebaseui": "^4.5.0",
-    "mini-css-extract-plugin": "^0.9.0"
+    "firebase": "^7.16.1",
+    "firebaseui": "^4.6.0"
   },
   "devDependencies": {
+    "@babel/core": "^7.10.5",
+    "@firebase/util": "^0.2.45",
+    "mini-css-extract-plugin": "^0.9.0",
     "babel-loader": "^8.1.0",
     "clean-webpack-plugin": "^3.0.0",
     "concurrently": "^5.2.0",
