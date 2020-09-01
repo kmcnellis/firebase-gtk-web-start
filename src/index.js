@@ -135,7 +135,7 @@ async function main() {
     .onSnapshot(snap => {
       const newAttendeeCount = snap.docs.length;
 
-      numberAttending.innerHTML = newAttendeeCount + ' people going';
+      numberAttending.innerHTML = newAttendeeCount + ' people virtually attending';
     })
 }
 main();
